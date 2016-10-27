@@ -1739,7 +1739,8 @@ public class TabLayout extends HorizontalScrollView {
                     // If we're showing both text and icon, add some margin bottom to the icon
                     bottomMargin = dpToPx(DEFAULT_GAP_TEXT_ICON);
                 }
-                if (bottomMargin != lp.bottomMargin) {
+                //change the bottomMargin if margin have not been set
+                if (bottomMargin != lp.bottomMargin&&0==lp.bottomMargin) {
                     lp.bottomMargin = bottomMargin;
                     iconView.requestLayout();
                 }
